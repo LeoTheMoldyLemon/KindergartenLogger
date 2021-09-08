@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:KindergartenLogger.Views"  
+             x:Class="KindergartenLogger.Views.ChildEditPage">
+    <StackLayout Orientation="Vertical">
+
+        <Label x:Name="ChildNameEntry"></Label>
+        <Label x:Name="ChildOIBEntry"></Label>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="ChildCancelButton" Clicked="CancelClicked" Text="Nazad"></Button>
+            <Button x:Name="ChildDeleteButton" Clicked="DeleteClicked" Text="Izbriši"></Button>
+        </StackLayout>
+        <Label Text="Izaberite ime skrbnika s popisa kako biste ga izbrisali:">
+        </Label>
+        <ListView x:Name="listView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Name, StringFormat='Ime i prezime: {0}'}"  TextColor="Black"/>
+                                <Label x:Name="OIB" Text="{Binding OIB, StringFormat='OIB: {0}'}"  TextColor="Black"/>
+                            </StackLayout>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="DeleteConnectionClicked" Command="{Binding Source={RelativeSource AncestorType={x:Type local:ChildEditPage}}, Path=GuardianTapped}" CommandParameter="{Binding .}"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="ConnectionAddButton" Clicked="AddConnectionClicked" Text="Poveži skrbnika"></Button>
+        </StackLayout>
+
+    </StackLayout>
+    
+    
+    
+    
+    
+    
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KindergartenLogger.Views.MainOptionsPage">
+    <StackLayout Orientation="Vertical">
+        
+        <Label Text="Vrijeme automatskog slanja poruke za dolazak djece:"></Label>
+        <CheckBox x:Name="AutomaticCheckBox" CheckedChanged="AutomaticCheckBox_CheckedChanged"></CheckBox>
+        <TimePicker x:Name="AutomaticTimePicker" Time="10:0:0"></TimePicker>
+        
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Ručno slanje poruka za dolazak djece (također resetira popis dolazaka djece)" Clicked="ManualArrivalClicked"></Button>
+            <Button Text="Resetiraj popis dolazaka djece" Clicked="ResetEntryClicked"></Button>
+            <Button Text="Resetiraj popis odlazaka djece (na početku novog dana)" Clicked="ResetExitClicked"></Button>
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Spremi" Clicked="SaveClicked"></Button>
+            <Button Text="Nazad" Clicked="CancelClicked"></Button>
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>

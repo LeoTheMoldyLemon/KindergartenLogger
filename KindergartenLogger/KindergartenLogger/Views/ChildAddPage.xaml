@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KindergartenLogger.Views.ChildAddPage">
+    <StackLayout Orientation="Vertical">
+
+        <Entry x:Name="ChildNameEntry" Placeholder="Ime i prezime djeteta"></Entry>
+        <Entry x:Name="ChildOIBEntry" Keyboard="Numeric" Placeholder="OIB djeteta"></Entry>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="ChildAddConfirmButton" Clicked="ConfirmClicked" Text="Potvrdi"></Button>
+            <Button x:Name="ChildAddCancelButton" Clicked="CancelClicked" Text="Odustani"></Button>
+        </StackLayout>
+    </StackLayout>
+    
+    
+</ContentPage>

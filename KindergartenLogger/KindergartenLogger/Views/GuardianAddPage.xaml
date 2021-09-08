@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KindergartenLogger.Views.GuardianAddPage">
+    <StackLayout Orientation="Vertical">
+
+        <Entry x:Name="GuardianNameEntry" Placeholder="Ime i prezime"></Entry>
+        <Entry x:Name="GuardianOIBEntry" Keyboard="Numeric" Placeholder="OIB"></Entry>
+        <Entry x:Name="GuardianPasswordEntry" IsPassword="True" Placeholder="Lozinka"></Entry>
+        <Entry x:Name="GuardianTelephoneEntry" Keyboard="Numeric" Placeholder="Broj telefona"></Entry>
+        <!-- s ovime se zajebavati poslije -->
+
+
+        <StackLayout Orientation="Horizontal">
+            <Switch IsToggled="True" x:Name="EntrySwitch"/>
+            <Label Text="Želite li primiti poruku ako vaše dijete ujutro nije ostavljeno u vrtić?"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Switch IsToggled="True" x:Name="ExitSwitch"/>
+            <Label Text="Želite li primiti poruku kada je vaše dijete uzeto iz vrtića?"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="GuardianAddConfirmButton" Clicked="ConfirmClicked" Text="Potvrdi"></Button>
+            <Button x:Name="GuardianAddCancelButton" Clicked="CancelClicked" Text="Odustani"></Button>
+        </StackLayout>
+    </StackLayout>
+    
+    
+    
+    
+    
+    
+</ContentPage>

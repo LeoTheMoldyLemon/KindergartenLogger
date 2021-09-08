@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:KindergartenLogger.Views"  
+             x:Class="KindergartenLogger.Views.GuardianOptionsList">
+
+    <ScrollView Orientation="Vertical">
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Nazad" x:Name="CancelButton" Clicked="BackClicked" HorizontalOptions="Center"></Button>
+            </StackLayout>
+            <Label Text="Izaberite ime skrbnika s popisa za postavke:"></Label>
+            <ListView x:Name="listView" BackgroundColor="Aqua">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Name, StringFormat='Ime i prezime: {0}'}"  TextColor="Black"/>
+                                    <Label Text="{Binding OIB, StringFormat='OIB: {0}'}"  TextColor="Black"/>
+                                </StackLayout>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="GuardianTapper" Command="{Binding Source={RelativeSource AncestorType={x:Type local:GuardianOptionsList}}, Path=GuardianTapped}" CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                    
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

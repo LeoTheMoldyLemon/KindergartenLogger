@@ -1,0 +1,92 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Text.Json" Version="5.0.2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v11.0\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\ChildExitList.xaml.cs">
+      <DependentUpon>ChildExitList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ConnectionExitPage.xaml.cs">
+      <DependentUpon>ConnectionExitPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GuardianOptionsPage.xaml.cs">
+      <DependentUpon>GuardianOptionsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GuardianAddPage.xaml.cs">
+      <DependentUpon>GuardianAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GuardianOptionsList.xaml.cs">
+      <DependentUpon>GuardianOptionsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GuardianEditList.xaml.cs">
+      <DependentUpon>GuardianEditList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GuardianEditPage.xaml.cs">
+      <DependentUpon>GuardianEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ChildEditPage.xaml.cs">
+      <DependentUpon>ChildEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ChildEditList.xaml.cs">
+      <DependentUpon>ChildEditList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ChildEntryList.xaml.cs">
+      <DependentUpon>ChildEntryList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ChildAddPage.xaml.cs">
+      <DependentUpon>ChildAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GuardianPasswordPage.xaml.cs">
+      <DependentUpon>GuardianPasswordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainPasswordPage.xaml.cs">
+      <DependentUpon>MainPasswordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ConnectionAddPage.xaml.cs">
+      <DependentUpon>ConnectionAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ChildSuccessPage.xaml.cs">
+      <DependentUpon>ChildSuccessPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainOptionsPage.xaml.cs">
+      <DependentUpon>MainOptionsPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\ChildEntryList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ChildAddPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MainPasswordPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ConnectionAddPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ChildSuccessPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MainOptionsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
