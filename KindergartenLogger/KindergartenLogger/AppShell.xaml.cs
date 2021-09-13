@@ -18,10 +18,6 @@ namespace KindergartenLogger
             catch(TargetInvocationException e){
                 Console.WriteLine(e);
             }
-//            Routing.RegisterRoute("ChildAddPage", typeof(ChildAddPage));
-//            Routing.RegisterRoute("ChildEditPage", typeof(ChildEditPage));
-//            Routing.RegisterRoute("ChildEditList", typeof(ChildEditList));
-
         }
         private void ChildEditListClicked(object sender, EventArgs e) 
         {
